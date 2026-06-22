@@ -2,8 +2,9 @@
 
 Production-ready full-stack app to upload CSV files of company records, store them in MongoDB Atlas, and view / search / filter / export them.
 
-> **Live Demo:** _add your frontend URL here after deploying, e.g._ `https://company-records.vercel.app`
-> **API:** _add your backend URL here, e.g._ `https://company-records-api.onrender.com`
+> **Live Demo:** https://company-records.netlify.app
+>
+> _Single URL — frontend (Netlify) proxies `/api` to the backend (Render) which connects to MongoDB Atlas. First load may take ~50s while the free-tier API wakes up._
 
 ## Tech Stack
 
