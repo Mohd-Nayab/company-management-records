@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: let React Router handle client-side routes so deep links
+# like /records/:id and a page refresh don't return a 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
