@@ -2,6 +2,17 @@
   command = "npm run build"
   publish = "dist"
 
+# Proxy all /api requests to the Render backend so the whole app works
+# behind a SINGLE Netlify URL (no separate backend URL needed by users).
+# IMPORTANT: your Render web service must be named exactly "company-records-api"
+# so its URL is https://company-records-api.onrender.com. If you used a
+# different name, update the host below to match.
+[[redirects]]
+  from = "/api/*"
+  to = "https://company-records-api.onrender.com/api/:splat"
+  status = 200
+  force = true
+
 # SPA fallback: let React Router handle client-side routes so deep links
 # like /records/:id and a page refresh don't return a 404.
 [[redirects]]
